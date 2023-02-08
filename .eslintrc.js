@@ -9,7 +9,9 @@ module.exports = {
     'plugin:@next/next/recommended',
   ],
   plugins: ['prettier'],
-  rules: {},
+  rules: {
+    'no-unused-vars': [1, { args: 'after-used', argsIgnorePattern: '^_' }],
+  },
   settings: {
     'import/resolver': {
       typescript: {
